@@ -1,307 +1,393 @@
 :root {
-    --primary: #2661D8;
-    --secondary: #0F3447;
-    --accentOne: #FFCD32;
-    --accentTwo: #E113D3;
+  --primary: #2661D8;
+  --secondary: #0F3447;
+  --accentOne: #FFCD32;
+  --accentTwo: #E11D3D;
 
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
-  }
+}
 
-  header {
-    height: 50px;
-    background: var(--primary);
-    
-    display: flex;
-    justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
 
-    text-transform: uppercase;
-  }
-  
-  header img {
-    width: 120px;
-    
-    position: relative;
-    margin: 8px;
-    border-radius: 5px;
-  }
-  
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 50px;
+  background: var(--primary);
+
+  display: flex;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+}
+
+header img {
+  width: 120px;
+
+  position: relative;
+  margin: 8px;
+  border-radius: 5px;
+}
+
+ul {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  padding: 5px;
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+a:hover {
+  background: white;
+  color: var(--primary);
+}
+
+#container {
+  height: 100vh;
+
+  background: url(https://cdn.discordapp.com/attachments/1084303053403979836/1141128690667892746/Entrevista_de_emprego_portrait.jpg) center / cover no-repeat;
+}
+
+#initial-container {
+  height: 100vh;
+
+  background: rgba(0, 0, 0, .6);
+  color: white;
+
+  padding: 20px;
+
+  text-align: justify;
+
+  user-select: none;
+}
+
+p {
+  font-size: 1.3rem;
+
+  margin-top: 30px;
+}
+
+#initial-container p {
+  font-size: 1.7rem;
+}
+
+#initial-container p:first-child {
+  margin-top: 100px;
+}
+
+#initial-container p:last-child {
+  font-size: 1.3rem;
+}
+
+/* viewport mobile menu */
+@media (max-width: 812px) {
   ul {
-    height: 50px;
-    display: flex;
-    align-items: center;
-  }
-  
-  li {
-    list-style: none;
-    margin: 0 15px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-    
-    padding: 5px;
-    border-radius: 5px;
-    transition: all .3s;
-  }
-  
-  a:hover {
-    background: white;
-    color: var(--primary);
+    display: none;
   }
 
-  #container {
-    height: 100vh;
-
-    background: url(https://cdn.discordapp.com/attachments/1084303053403979836/1141128690667892746/Entrevista_de_emprego_portrait.jpg) center / cover no-repeat;
-  }
-
-  #initial-container {
-    height: 100vh;
-    
-    background: rgba(0, 0, 0, .6);
-    color: white;
-    
-    padding: 20px;
-
-    text-align: justify;
-  }
-
-  p {
-    font-size: 1.3rem;
-    
-    margin-top: 30px;
-  }
-
-  #initial-container p {
-    font-size: 1.7rem;
-  }
-  
-  #initial-container p:first-child {
-    margin-top: 100px;
-  }
-
-  #initial-container p:last-child {
-    font-size: 1.3rem;
-  }
-
-  /* viewport mobile - altura máxima: 568px */
-  @media (max-height: 567px) {
-    #initial-container p {
-      font-size: 1.3rem;
-    }
-    
-    #initial-container p:first-child {
-      margin-top: 30px;
-    }
-  }
-
-  span {
-    background: var(--primary);
-    padding: 5px;
-    border-radius: 10px;
-  }
-
-  ion-icon {
-    font-size: 40px;
-  }
-
-  #more-info p {
-    margin-top: 5px;
-  }
-
-  #more-info {
-    width: fit-content;
-    text-align: center;
-
+  header img {
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translate(-50%);
   }
+}
 
-  #content, #about-us, #subscription, footer {
-    padding: 20px;
-
-    text-align: justify;
-
-    border-top: 5px solid var(--accentOne);
-    border-bottom: 5px solid var(--accentOne);
+/* viewport mobile - altura máxima: 568px */
+@media (max-height: 567px) {
+  #initial-container p {
+    font-size: 1.3rem;
   }
 
-  #content span {
-    background: var(--accentOne);
-    color: white;
+  #initial-container p:first-child {
+    margin-top: 30px;
   }
 
-  #about-us {
-    border-top: 5px solid var(--primary);
-    border-bottom: 5px solid var(--primary);
+  #contact p {
+    line-height: 2;
+    font-size: 1.1rem;
   }
+}
 
-  #about-us h1 {
-    background: var(--secondary);
-    border-radius: 5px;
-    padding: 0 15px;
+span {
+  background: var(--primary);
+  padding: 5px;
+  border-radius: 10px;
+}
 
-    text-align: end;
-    color: white;
-  }
+ion-icon {
+  font-size: 40px;
+}
 
-  #about-us p span {
-    background: none;
-    color: var(--primary);
-  }
+#more-info p {
+  margin-top: 5px;
+}
 
-  #about-us a {
-    color: var(--primary);
-  }
+#more-info {
+  width: fit-content;
+  text-align: center;
 
-  #subscription span {
-    background: var(--accentTwo);
-    color: white;
-  }
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
 
-  .card {
-    border: 1px solid #d3d3d3;
-    margin-top: 15px;
+#more-info ion-icon {
+  animation: jumpingArrow 5s ease-in-out 0s infinite normal forwards;
+}
 
-    background: #f0f0f0;
-    padding: 20px 10px;
+@keyframes jumpingArrow {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+}
+
+#content,
+#about-us,
+#subscription,
+footer {
+  padding: 20px;
+
+  text-align: justify;
+
+  border-top: 5px solid var(--accentOne);
+  border-bottom: 5px solid var(--accentOne);
+}
+
+#content span {
+  background: var(--accentOne);
+  color: white;
+}
+
+#about-us {
+  border-top: 5px solid var(--primary);
+  border-bottom: 5px solid var(--primary);
+}
+
+#about-us h1 {
+  background: var(--secondary);
+  border-radius: 5px;
+  padding: 0 15px;
+
+  text-align: end;
+  color: white;
+}
+
+#about-us p span {
+  background: none;
+  color: var(--primary);
+}
+
+#about-us a {
+  color: var(--primary);
+}
+
+#subscription span {
+  background: var(--accentTwo);
+  color: white;
+}
+
+.card {
+  border: 1px solid #d3d3d3;
+  margin-top: 15px;
+
+  background: #f0f0f0;
+  padding: 20px 10px;
+  border-radius: 10px;
+
+  text-align: center;
+
+  transition: all .2s;
+
+  user-select: none;
+}
+
+.cards ion-icon {
+  font-size: 4rem;
+  color: var(--accentTwo);
+}
+
+.card a {
+  padding: 10px;
+
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 2;
+
+  position: relative;
+  top: 10px;
+
+  border-radius: 30px;
+}
+
+.cardOne a {
+  background: var(--primary);
+  color: white;
+}
+
+.cardOne a:hover {
+  box-shadow: 0px 0px 20px 3px #2C8CDC;
+}
+
+.cardTwo a {
+  background: var(--accentOne);
+  color: var(--primary);
+}
+
+.cardTwo a:hover {
+  box-shadow: 0px 0px 20px 3px var(--accentOne)
+}
+
+.card p {
+  margin: 10px 0;
+}
+
+/* viewport mobile cards */
+@media (max-height: 812px) {
+  .cardOne:hover, .cardTwo:hover {
     border-radius: 10px;
-    
+    box-shadow:  5px 5px 10px #a8a8a8,
+                -5px -5px 10px #ffffff;
+  }
+}
+
+#enpathos-flag {
+  display: flex;
+}
+
+#enpathos-flag .box {
+  height: 20px;
+}
+
+#enpathos-flag .box1 {
+  width: 60%;
+  background: var(--primary);
+}
+
+#enpathos-flag .box2 {
+  width: 30%;
+  background: var(--accentTwo);
+}
+
+#enpathos-flag .box3 {
+  width: 10%;
+  background: var(--accentOne);
+}
+
+footer,
+#contact {
+  background: var(--secondary);
+  color: white;
+
+  border: none;
+}
+
+/* viewport: tablet - largura mínima: 768px */
+@media (min-width: 768px) {
+  #container {
+    background: url(https://cdn.discordapp.com/attachments/1084303053403979836/1141115786170216578/Entrevista_de_emprego.jpg) center / cover no-repeat;
+  }
+
+  #initial-container p {
     text-align: center;
 
-    transition: all .2s;
+    font-size: 2.25rem;
+  }
+
+  #content h1,
+  #content p,
+  #about-us h1,
+  #about-us p {
+    width: 50vw;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+
+    text-align: center justify;
+  }
+
+  #subscription h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #subscription .cards {
+    width: 85vw;
+    height: 400px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    margin: 0 auto;
   }
 
   .card:hover {
     transform: translateY(-15px);
   }
 
-  .card a {
-    padding: 10px;
-    
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 2;
-    
+  #subscription .cards p {
     position: relative;
     top: 10px;
-    
-    border-radius: 30px;
   }
 
-  .cardOne a {
-    background: var(--primary);
-    color: white;
+  #subscription .cards a {
+    position: relative;
+    top: 40px;
   }
 
-  .cardOne a:hover {
-    box-shadow: 0px 0px 20px 3px #2C8CDC;
+  #contact {
+    width: 40vw;
+
+    text-align: center;
+    margin: 0 auto;
   }
+}
 
-  .cardTwo a {
-    background: var(--accentOne);
-    color: var(--primary);
+/* viewport desktop */
+@media (min-width: 900px) {
+  #subscription .cards {
+    width: 70vw;
   }
-
-  .cardTwo a:hover {
-    box-shadow: 0px 0px 20px 3px var(--accentOne)
-  }
-
-  .card p {
-    margin: 20px 0;
-  }
-
-  #enpathos-flag {
-    display: flex;
-  }
-
-  #enpathos-flag .box {
-    height: 20px;
-  }
-
-  #enpathos-flag .box1 {
-    width: 60%;
-    background: var(--primary);
-  }
-
-  #enpathos-flag .box2 {
-    width: 30%;
-    background: var(--accentTwo);
-  }
-
-  #enpathos-flag .box3 {
-    width: 10%;
-    background: var(--accentOne);
-  }
-
-  footer, #contact {
-    background: var(--secondary);
-    color: white;
-
-    border: none;
-  }
-
-  /* viewport: tablet - largura mínima: 768px */
-  @media (min-width: 768px) {
-    #container {
-      background: url(https://cdn.discordapp.com/attachments/1084303053403979836/1141115786170216578/Entrevista_de_emprego.jpg) center / cover no-repeat;
-    }
-
-    #initial-container p {
-      text-align: center;
-
-      font-size: 2.25rem;
-    }
-
-    #content h1, #content p, #about-us h1, #about-us p {
-      width: 50vw;
-
-      position: relative;
-      left: 50%;
-      transform: translate(-50%);
-
-      text-align: center justify;
-    }
-
-    #subscription h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    #subscription .cards {
-      width: 70vw;
-      height: 400px;
-
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-
-      margin: 0 auto;
-    }
-
-    #subscription .cards p {
-      position: relative;
-      top: 30px;
-    }
-
-    #subscription .cards a {
-      position: relative;
-      top: 65px;
-    }
-
-    #contact {
-      width: 40vw;
-
-      text-align: center;
-      margin: 0 auto;
-    }
-  }
+}
